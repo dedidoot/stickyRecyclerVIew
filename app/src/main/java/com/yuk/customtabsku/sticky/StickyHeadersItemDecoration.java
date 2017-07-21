@@ -7,7 +7,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 /**
- * Created by aurel on 22/09/14.
+ * Created by dedi on 22/09/14.
+ * Happy Coding
+ * inspiration https://github.com/eowise/recyclerview-stickyheaders
  */
 public class StickyHeadersItemDecoration extends RecyclerView.ItemDecoration {
 

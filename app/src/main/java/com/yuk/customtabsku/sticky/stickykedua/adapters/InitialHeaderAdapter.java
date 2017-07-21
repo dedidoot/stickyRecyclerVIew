@@ -14,6 +14,7 @@ import java.util.List;
 
 /**
  * Created by aurel on 23/09/14.
+ * Ini untuk overlay
  */
 public class InitialHeaderAdapter implements StickyHeadersAdapter<InitialHeaderAdapter.ViewHolder> {
 

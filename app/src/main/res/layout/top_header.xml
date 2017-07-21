@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:gravity="left|center_vertical"
         android:textAppearance="?android:textAppearanceMedium"
-        android:background="?android:colorBackground"/>
+        android:background="#ECF5FF"/>
 
     <ImageView
         android:layout_width="match_parent"

@@ -12,7 +12,6 @@
         android:layout_gravity="center_vertical"
         android:background="@color/primary">
         <Spinner
-            style="@style/Widget.HeaderBar.Spinner"
             android:id="@+id/samples_spinner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

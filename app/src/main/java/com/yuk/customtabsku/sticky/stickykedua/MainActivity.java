@@ -15,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.yuk.customtabsku.R;
+import com.yuk.customtabsku.sticky.HeaderStore;
 import com.yuk.customtabsku.sticky.OnHeaderClickListener;
 import com.yuk.customtabsku.sticky.StickyHeadersBuilder;
 import com.yuk.customtabsku.sticky.StickyHeadersItemDecoration;
@@ -31,10 +32,22 @@ public class MainActivity extends ActionBarActivity implements OnHeaderClickList
     private Toolbar toolbar;
     private RecyclerView list;
     private StickyHeadersItemDecoration top;
-    private StickyHeadersItemDecoration overlay;
+   // private StickyHeadersItemDecoration overlay;
     private PersonDataProvider personDataProvider;
     private PersonAdapter personAdapter;
     private Spinner samplesSpinner;
+
+    /**
+     * syarat class buat sticky
+     * 1. {@link StickyHeadersBuilder}
+     * 2. {@link com.yuk.customtabsku.sticky.StickyHeadersAdapter}
+     * 3. {@link OnHeaderClickListener}
+     * 4. {@link com.yuk.customtabsku.sticky.DrawOrder}
+     * 5. {@link HeaderStore}
+     * 6. {@link StickyHeadersItemDecoration}
+     * 7. {@link BigramHeaderAdapter}
+     *
+     * **/
 
 
     @Override
@@ -59,11 +72,11 @@ public class MainActivity extends ActionBarActivity implements OnHeaderClickList
                 .build();
 
 
-        overlay = new StickyHeadersBuilder()
+       /* overlay = new StickyHeadersBuilder()
                 .setAdapter(personAdapter)
                 .setRecyclerView(list)
                 .setStickyHeadersAdapter(new InitialHeaderAdapter(personDataProvider.getItems()), true)
-                .build();
+                .build();*/
 
 
         // Inflate a menu to be displayed in the toolbar
@@ -95,13 +108,13 @@ public class MainActivity extends ActionBarActivity implements OnHeaderClickList
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 if (i == 0) {
                     list.setAdapter(personAdapter);
-                    list.removeItemDecoration(overlay);
+                  //  list.removeItemDecoration(overlay);
                     list.addItemDecoration(top);
                 }
                 else {
                     list.setAdapter(personAdapter);
                     list.removeItemDecoration(top);
-                    list.addItemDecoration(overlay);
+                 //   list.addItemDecoration(overlay);
                 }
             }
 
